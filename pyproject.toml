@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agentic-pricing"
+version = "0.0.1"
+description = "Shared foundation for agentic AI in insurance pricing."
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "David Fischer", email = "fischerdm1@outlook.com" },
+]
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = [
+    "agentic-pricing-core>=0.0.1",
+    "agentic-pricing-servers>=0.0.1",
+]
+
+[project.urls]
+Homepage = "https://agentic-pricing.ai"
+
+# Meta-package: ships no code of its own. The 'agentic_pricing' namespace is
+# provided by the sub-packages under packages/ (PEP 420, no __init__.py).
+[tool.hatch.build.targets.wheel]
+core-metadata-version = "2.4"
+bypass-selection = true
+
+[tool.hatch.build.targets.sdist]
+core-metadata-version = "2.4"
+only-include = ["README.md", "LICENSE"]
