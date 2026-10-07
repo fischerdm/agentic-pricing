@@ -3,9 +3,9 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "agentic-pricing"
-version = "0.0.2"
-description = "Shared foundation for agentic AI in insurance pricing."
+name = "agentic-pricing-agents"
+version = "0.0.1"
+description = "Line-of-business-agnostic agentic components for insurance pricing."
 readme = "README.md"
 license = "MIT"
 authors = [
@@ -18,23 +18,14 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
 ]
-dependencies = [
-    "agentic-pricing-core>=0.0.1",
-    "agentic-pricing-tools>=0.0.1",
-    "agentic-pricing-agents>=0.0.1",
-    "agentic-pricing-mcp>=0.0.1",
-    "agentic-pricing-servers>=0.0.1",
-]
 
 [project.urls]
 Homepage = "https://agentic-pricing.ai"
 
-# Meta-package: ships no code of its own. The 'agentic_pricing' namespace is
-# provided by the sub-packages under packages/ (PEP 420, no __init__.py).
+# 'agentic_pricing' is a PEP 420 namespace package: src/agentic_pricing/ has no __init__.py.
 [tool.hatch.build.targets.wheel]
 core-metadata-version = "2.4"
-bypass-selection = true
+packages = ["src/agentic_pricing"]
 
 [tool.hatch.build.targets.sdist]
 core-metadata-version = "2.4"
-only-include = ["README.md", "LICENSE"]

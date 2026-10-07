@@ -1,6 +1,6 @@
-# agentic-pricing-core
+# agentic-pricing-agents
 
-Shared domain model, interfaces and configuration for agentic insurance pricing.
+Line-of-business-agnostic agentic components for insurance pricing.
 
 Part of [agentic-pricing](https://pypi.org/project/agentic-pricing/), the shared
 foundation for agentic AI in insurance pricing. This package is at an early stage.
@@ -8,9 +8,9 @@ foundation for agentic AI in insurance pricing. This package is at an early stag
 ## Installation
 
 ```bash
-pip install agentic-pricing-core
+pip install agentic-pricing-agents
 ```
 
 ```python
-import agentic_pricing.core
+import agentic_pricing.agents
 ```

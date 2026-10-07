@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "agentic-pricing-core"
-version = "0.0.1"
-description = "Line-of-business-agnostic building blocks for agentic insurance pricing."
+version = "0.0.2"
+description = "Shared domain model, interfaces and configuration for agentic insurance pricing."
 readme = "README.md"
 license = "MIT"
 authors = [
